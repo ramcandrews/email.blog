@@ -17,3 +17,4 @@ I am interested in making blogging fast and easy by using email as the writing i
 1. Autofetch links; screenshot, thumbnail and scrape content.
 2. Summarize scraped content for thumbnail caption.
 3. Read text from images
+4. Image auto-tagging
