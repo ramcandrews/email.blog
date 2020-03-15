@@ -2,7 +2,7 @@
 a flask bloging platform. Listen to an imap folder and then post the messages as blog posts.
 
 ## Purpose
-I am interested in making blogging fast and easy by using email as the writing interface. Eventual I will use this platform to test out AI powered UI experiments.
+I am interested in making blogging fast and easy by using email as the writing interface. Eventually I will use this platform to test out AI powered UI experiments.
 
 ## Roadmap --> 1.0 
 ### Getting the platform off of the ground
