@@ -7,20 +7,25 @@ I am interested in making blogging fast and easy by using email as the writing i
 ## Roadmap --> 1.0 
 ### Getting the platform off of the ground
 1. Convert message subject to blog post title and plain text body to blog post.
-2. Implement tags for posts
-3.Save to a Database
-4. A or B
-  1. (A)Build templates and configure static site generator.
-  2. (B)Build API to serve content to a JAMSTACK client.
-5. Integrate markdown and HTML formating from multi-part messages.
-6. Disply inline images in posts. Display/embed attachments in posts.
-7. Configure email clients to use public key encryption. Write or configure module to decrypt messages. Authentication will be via public key encryption.
+2. Automatically 
+   1. fetch links
+   2. Screenshot page
+   3. Thumbnail screenshot and embed in post.
+   4. Scrape content
+   5. Save and attribute scraped content
+3. Implement tags for posts
+4. Save everything to a Database
+5. i or ii
+    1. Build templates and configure static site generator.
+    2. Build API to serve content to a JAMSTACK client.
+6. Integrate markdown and HTML formating from multi-part messages.
+7. Disply inline images in posts. Display/embed attachments in posts.
+8. Configure email clients to use public key encryption. Write or configure module to decrypt messages. Authentication will be via public key encryption.
 
 ## Roadmap 1.0 --> 2.0
 ### AI integration and feature buildout
-1. Autofetch links; screenshot, thumbnail and scrape content.
-2. Summarize scraped content for thumbnail caption.
-3. Read text from images
+1. Summarize scraped content for thumbnail caption.
+2. Email listserv
+3. Broadcast to other channels.
 4. Image auto-tagging
-5. Broadcast to other channels.
-6. Email listserv
+5. Read text from images
