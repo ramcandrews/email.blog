@@ -8,8 +8,8 @@ I am interested in making blogging fast and easy by using email as the writing i
 ### Getting the platform off of the ground
 1. Convert message subject to blog post title and plain text body to blog post.
 2. A or B
-  2-A. Build templates and configure static site generator.
-  2-B. Build API to serve content to a JAMSTACK client.
+  * 2-A. Build templates and configure static site generator.
+  * 2-B. Build API to serve content to a JAMSTACK client.
 3. Integrate markdown and HTML formating from multi-part messages.
 4. disply inline images in posts. Display/embed attachments in posts.
 5. Configure email clients to use public key encryption. Write or configure module to decrypt messages. Authentication will be via public key encryption.
