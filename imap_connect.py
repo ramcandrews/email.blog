@@ -1,6 +1,8 @@
 import imaplib
 import email.message
+
 import json
+import re
 
 import secrets
 
@@ -28,27 +30,38 @@ try:
     print('There are %d messages in Drafts' % num_msgs)
 
     theDict = dict()
-    with open("dump_file.json", "w") as write_file:
+    with open("test_dump.json", "w") as write_file:
     
-
+        # num_msgs to read all messages.
         for message in range(num_msgs):
             msg_number += 1
-            theDict[msg_number] = list()
+            #theDict[msg_number] = list()
             typ, msg_data = connection.fetch("{}".format(msg_number), '(RFC822)')
             for response_part in msg_data:
                 if isinstance(response_part, tuple):
                     meta = email.message_from_string(response_part[1].decode("utf-8"))
-                    for header in [ 'to', 'from', 'subject' ]:
-                        theDict[msg_number].append(meta[header])
+                    #for header in [ 'to', 'from', 'subject' ]:
+                        #theDict[msg_number].append(meta[header])
                     if str(meta.is_multipart()):
                         try:
-                            theDict[msg_number].append(str(meta.get_payload()[0])) #plain
-                            theDict[msg_number].append(str(meta.get_payload()[1])) #html
+                            # Plaintext
+                            if meta.get_payload()[0]:
+                                for line in str(meta.get_payload()[0]).splitlines():
+                                    if re.match('https?://+', line):
+                                        theDict[meta['subject']] = line
+                                    else:
+                                        pass
+                            #html
+                            elif meta.get_payload()[1]:
+                                for line in str(meta.get_payload()[1]).splitlines():
+                                    if re.match('https?://+', line):
+                                        theDict[meta['subject']] = line
+                            
                         except:
-                            theDict[msg_number].append(None)
+                            theDict[meta['subject']] = None
                     else:
-                        theDict[msg_number].append(meta.get_payload(None, True))
-            print(theDict[msg_number])
+                        theDict[meta['subject']] = meta.get_payload(None, True)
+            #print(theDict[meta['subject']])
         json.dump(theDict, write_file)
 finally:
     try:       
