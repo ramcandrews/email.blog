@@ -4,6 +4,14 @@ a flask bloging platform. Listen to an imap folder and then post the messages as
 ## Purpose
 I am interested in making blogging fast and easy by using email as the writing interface. Eventually I will use this platform to test out AI powered UI experiments.
 
+This was born out of a desire to start building my own datasets. I want to be able to create content from my phone and have it seamlessly be formatted for use to program a Nueral network at a later date. I am using an iphone and am not at the point where I can devote time or money to developng on the apple app market. Using what I have available and veing resourceful is one of my defining abilities. Why build a mobile app when I have email?
+
+I also need a blog for self promotion and to coordinate my online presence. 
+
+One half of this app works in the background to help me collect several datapoints every day. The other half enables me to effortlessly update a blog.
+
+I also built an API and webapp with almost identicle features, but email is just faster and easier for data collection on the go...
+
 ## Roadmap --> 1.0 
 ### Getting the platform off of the ground
 1. Convert message subject to blog post title and plain text body to blog post. :heavy_check_mark:
